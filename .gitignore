@@ -1,0 +1,19 @@
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Editores
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+
+# Archivos temporales
+*.tmp
+*.bak
