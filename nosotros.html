@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre nosotros - YaMarca</title>
+  <meta name="description" content="Conoce YaMarca, sistema chileno de control de asistencia laboral diseñado para PYMES, conforme a la Resolución Exenta N°38/2024 de la Dirección del Trabajo.">
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      color: #0f172a;
+      background-color: #f8fafc;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    .nav {
+      background-color: #ffffff;
+      border-bottom: 1px solid #e2e8f0;
+      padding: 16px 0;
+    }
+    .nav-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .brand-mark {
+      width: 32px;
+      height: 32px;
+      background-color: #2563eb;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .brand-mark svg { width: 20px; height: 20px; }
+    .brand-name {
+      font-size: 18px;
+      font-weight: 600;
+      color: #0f172a;
+      letter-spacing: -0.01em;
+      text-decoration: none;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 48px 24px 96px 24px;
+    }
+    h1 {
+      font-size: 36px;
+      font-weight: 700;
+      margin: 0 0 8px 0;
+      color: #0f172a;
+      letter-spacing: -0.02em;
+    }
+    .subtitle {
+      color: #64748b;
+      font-size: 18px;
+      margin-bottom: 40px;
+    }
+    h2 {
+      font-size: 22px;
+      font-weight: 600;
+      margin: 40px 0 16px 0;
+      color: #0f172a;
+      letter-spacing: -0.01em;
+    }
+    p, li {
+      color: #334155;
+      font-size: 16px;
+    }
+    p { margin: 0 0 16px 0; }
+    strong { color: #0f172a; font-weight: 600; }
+    a { color: #2563eb; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .mission-card {
+      background-color: #2563eb;
+      color: #ffffff;
+      padding: 32px;
+      border-radius: 16px;
+      margin: 32px 0;
+      text-align: center;
+    }
+    .mission-card .label {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      opacity: 0.85;
+      margin-bottom: 12px;
+    }
+    .mission-card .text {
+      font-size: 22px;
+      font-weight: 500;
+      line-height: 1.5;
+      letter-spacing: -0.01em;
+    }
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin: 24px 0 32px 0;
+    }
+    .value-card {
+      background-color: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 24px;
+    }
+    .value-card .icon {
+      width: 40px;
+      height: 40px;
+      background-color: #eff6ff;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 12px;
+    }
+    .value-card .icon svg {
+      width: 22px;
+      height: 22px;
+      stroke: #2563eb;
+    }
+    .value-card h3 {
+      font-size: 16px;
+      font-weight: 600;
+      color: #0f172a;
+      margin: 0 0 6px 0;
+    }
+    .value-card p {
+      font-size: 14px;
+      color: #64748b;
+      margin: 0;
+      line-height: 1.5;
+    }
+    .info-card {
+      background-color: #eff6ff;
+      border-left: 4px solid #2563eb;
+      padding: 16px 20px;
+      margin: 24px 0;
+      border-radius: 0 8px 8px 0;
+    }
+    .info-card p:last-child { margin-bottom: 0; }
+    .warning {
+      background-color: #fef3c7;
+      border-left: 4px solid #f59e0b;
+      padding: 16px 20px;
+      margin: 24px 0;
+      border-radius: 0 8px 8px 0;
+    }
+    .warning p:last-child { margin-bottom: 0; }
+    .cta-section {
+      background-color: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      padding: 32px;
+      margin: 48px 0 0 0;
+      text-align: center;
+    }
+    .cta-section h2 {
+      margin-top: 0;
+    }
+    .cta-button {
+      display: inline-block;
+      background-color: #2563eb;
+      color: #ffffff;
+      padding: 14px 32px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 16px;
+      margin-top: 16px;
+      transition: background-color 0.2s;
+    }
+    .cta-button:hover {
+      background-color: #1d4ed8;
+      text-decoration: none;
+    }
+    .footer {
+      background-color: #ffffff;
+      border-top: 1px solid #e2e8f0;
+      padding: 32px 24px;
+      text-align: center;
+      color: #64748b;
+      font-size: 14px;
+    }
+    .footer a { margin: 0 8px; }
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <span class="brand-mark" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="20 6 9 17 4 12"></polyline>
+      </svg>
+    </span>
+    <a href="/" class="brand-name">YaMarca</a>
+  </div>
+</nav>
+
+<div class="container">
+
+<h1>Sobre nosotros</h1>
+<p class="subtitle">El sistema chileno de control de asistencia, hecho para PYMES.</p>
+
+<h2>Cómo nació YaMarca</h2>
+
+<p>YaMarca nació de una necesidad real. En 2024, la Dirección del Trabajo de Chile publicó la <strong>Resolución Exenta N°38/2024</strong>, que establece nuevos requisitos para los sistemas de registro electrónico de asistencia laboral. Estos requisitos exigen funciones específicas que la mayoría de los sistemas tradicionales (libros de papel, planillas Excel, relojes biométricos antiguos) no cumplen.</p>
+
+<p>Como empresa que opera en el rubro farmacéutico, enfrentamos el mismo desafío que muchas PYMES chilenas: necesitábamos una herramienta moderna, simple y adecuada a la normativa. Las soluciones disponibles eran caras, complejas o estaban pensadas para grandes empresas con departamentos completos de recursos humanos.</p>
+
+<p>Así nació YaMarca: un sistema diseñado por y para PYMES chilenas, simple de usar, accesible en precio y enfocado en cumplir con la legislación laboral del país.</p>
+
+<div class="mission-card">
+  <span class="label">Nuestra misión</span>
+  <p class="text">Que cualquier empresa chilena, sin importar su tamaño, pueda gestionar la asistencia de sus trabajadores de forma simple, conforme a la ley y sin pagar fortunas.</p>
+</div>
+
+<h2>Nuestros valores</h2>
+
+<p>Estos cuatro principios guían cada decisión que tomamos en YaMarca:</p>
+
+<div class="values-grid">
+
+  <div class="value-card">
+    <div class="icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10"></circle>
+        <line x1="2" y1="12" x2="22" y2="12"></line>
+        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+      </svg>
+    </div>
+    <h3>Simplicidad</h3>
+    <p>Las herramientas tienen que servir a las personas, no al revés. Si una función requiere un manual de 50 páginas, está mal diseñada.</p>
+  </div>
+
+  <div class="value-card">
+    <div class="icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+        <circle cx="12" cy="12" r="3"></circle>
+      </svg>
+    </div>
+    <h3>Transparencia</h3>
+    <p>Sin letra chica, sin sorpresas en la facturación. Lo que ves es lo que pagas. Si algo cambia, lo decimos con anticipación.</p>
+  </div>
+
+  <div class="value-card">
+    <div class="icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+      </svg>
+    </div>
+    <h3>Soporte cercano</h3>
+    <p>Cuando escribes, te responde una persona, no un robot. Conocemos a nuestros clientes por nombre y escuchamos sus necesidades reales.</p>
+  </div>
+
+  <div class="value-card">
+    <div class="icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+      </svg>
+    </div>
+    <h3>Cumplimiento</h3>
+    <p>Estamos en proceso de certificación oficial y trabajamos para cumplir con la Resolución Exenta N°38/2024 de la Dirección del Trabajo.</p>
+  </div>
+
+</div>
+
+<h2>Compromiso con la Resolución Exenta N°38/2024</h2>
+
+<p>La <strong>Resolución Exenta N°38/2024</strong> de la Dirección del Trabajo de Chile establece los requisitos técnicos y operativos que deben cumplir los sistemas electrónicos de registro de asistencia laboral en el país.</p>
+
+<div class="warning">
+  <p><strong>Estado actual:</strong> al día de hoy, YaMarca <strong>no cuenta aún con la certificación oficial</strong> de la Dirección del Trabajo. Nos encontramos en proceso de adecuación técnica para cumplir con todos los requisitos de la resolución.</p>
+</div>
+
+<p>Trabajamos activamente para obtener la certificación lo antes posible. Mientras tanto, mantenemos a nuestros clientes informados sobre el avance del proceso y publicaremos cualquier hito relevante directamente en este sitio y por correo electrónico.</p>
+
+<p>Recomendamos a nuestros clientes verificar siempre el cumplimiento normativo aplicable a su empresa con asesoría profesional. YaMarca es una herramienta de apoyo, no un sustituto de la responsabilidad legal de cada empleador.</p>
+
+<h2>Empresa detrás del servicio</h2>
+
+<p>YaMarca es operado por <strong>Farmacias LF SpA</strong>, una sociedad por acciones constituida en Chile.</p>
+
+<ul>
+  <li><strong>Razón social:</strong> Farmacias LF SpA</li>
+  <li><strong>RUT:</strong> 77.756.289-4</li>
+  <li><strong>Domicilio:</strong> Santiago, Chile</li>
+  <li><strong>Contacto general:</strong> <a href="mailto:hola@yamarca.cl">hola@yamarca.cl</a></li>
+</ul>
+
+<div class="cta-section">
+  <h2>¿Listo para probar YaMarca?</h2>
+  <p>Empieza tu prueba gratuita de 30 días, sin tarjeta de crédito.</p>
+  <a href="https://app.yamarca.cl" class="cta-button">Crear cuenta gratis</a>
+</div>
+
+</div>
+
+<footer class="footer">
+  <p>&copy; 2026 YaMarca &middot; Farmacias LF SpA</p>
+  <p>
+    <a href="/">Inicio</a> &middot;
+    <a href="/nosotros.html">Sobre nosotros</a> &middot;
+    <a href="/contacto.html">Contacto</a> &middot;
+    <a href="/terminos.html">Términos de Servicio</a> &middot;
+    <a href="/privacidad.html">Privacidad</a> &middot;
+    <a href="/cookies.html">Cookies</a>
+  </p>
+</footer>
+
+</body>
+</html>
